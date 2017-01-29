@@ -1,15 +1,11 @@
-gl.setup(300, 500)
+gl.setup(350, 100)
 
 util.auto_loader(_G)
 
 local font = resource.load_font("OpenSans-Regular.ttf")
 
-util.file_watch("day.txt", function(content)
-    day = content
-end)
-
-util.file_watch("weatherInfo.txt", function(content)
-    weatherInfo = content
+util.file_watch("barEvening.txt", function(content)
+ 	bar = content
 end)
 
 function wrap(str, limit, indent, indent1)
@@ -28,21 +24,16 @@ function wrap(str, limit, indent, indent1)
     return splitted
 end
 
+
 function node.render()
-	gl.clear(1,0,0,1)
-	font:write(10, 30, "Weather", 30, 1,1,1,1)
+    gl.clear(1, 0, 0, 1) -- red
 
-    for idx, line in ipairs(wrap(day), 40) do
-            if idx > 15 then
+    font:write(10, 10, "Barabend", 20, 1,1,1,1)
+
+    for idx, line in ipairs(wrap(bar), 40) do
+            if idx > 5 then
                 break
             end
-        font:write(10, 40 + 50 * idx, line, 15, 1,1,1,1)
-    end
-
-    for idx, line in ipairs(wrap(weatherInfo), 40) do
-            if idx > 15 then
-                break
-            end
-        font:write(130, 40 + 50 * idx, line, 15, 1,1,1,1)
+        font:write(10, 20 + 10 * idx, line, 10, 1,1,1,1)
     end
 end
