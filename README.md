@@ -1,7 +1,7 @@
 # insterBeamer
 This is an Info-Beamer project for my dorm. 
 <p align="left">
-  <img src="screenshot.jpg"/>
+  <img src="screenshot.jpeg" />
 </p>
 <sup>Uses [KVVLiveApi](https://github.com/cCirclEe/kvvliveapi) and [WeatherInfo](https://github.com/cCirclEe/weatherInfo) as data source.</sup>
 
