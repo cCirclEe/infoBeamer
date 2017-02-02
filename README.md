@@ -1,5 +1,9 @@
 # insterBeamer
 This is an Info-Beamer project for my dorm. 
+<p align="left">
+  <img src="screenshot.jpg"/>
+</p>
+<sup>Uses [KVVLiveApi](https://github.com/cCirclEe/kvvliveapi) and [WeatherInfo](https://github.com/cCirclEe/weatherInfo) as data source.</sup>
 
 #Installation
 
