@@ -1,8 +1,8 @@
 #!/bin/bash
-/usr/local/bin/weather 0 > /opt/insterBeamer/insterBeamer/weather/weatherInfo.txt
-/usr/local/bin/weather 1 >> /opt/insterBeamer/insterBeamer/weather/weatherInfo.txt
-/usr/local/bin/weather 2 >> /opt/insterBeamer/insterBeamer/weather/weatherInfo.txt 
-/usr/local/bin/weather 3 >> /opt/insterBeamer/insterBeamer/weather/weatherInfo.txt 
-/usr/local/bin/weather 4 >> /opt/insterBeamer/insterBeamer/weather/weatherInfo.txt 
-/usr/local/bin/weather 5 >> /opt/insterBeamer/insterBeamer/weather/weatherInfo.txt 
-/usr/local/bin/weather 6 >> /opt/insterBeamer/insterBeamer/weather/weatherInfo.txt 
+/opt/insterBeamer/scripts/weather.py 0 > /opt/insterBeamer/insterBeamer/weather/weatherInfo.txt
+/opt/insterBeamer/scripts/weather.py 1 >> /opt/insterBeamer/insterBeamer/weather/weatherInfo.txt
+/opt/insterBeamer/scripts/weather.py 2 >> /opt/insterBeamer/insterBeamer/weather/weatherInfo.txt 
+/opt/insterBeamer/scripts/weather.py 3 >> /opt/insterBeamer/insterBeamer/weather/weatherInfo.txt 
+/opt/insterBeamer/scripts/weather.py 4 >> /opt/insterBeamer/insterBeamer/weather/weatherInfo.txt 
+/opt/insterBeamer/scripts/weather.py 5 >> /opt/insterBeamer/insterBeamer/weather/weatherInfo.txt 
+/opt/insterBeamer/scripts/weather.py 6 >> /opt/insterBeamer/insterBeamer/weather/weatherInfo.txt 

@@ -30,7 +30,7 @@ function node.render()
     font:write(15, 10, "Bahn", 60, 1,1,1,1)
     font:write(15, 70, "(Waldstadt Zentrum)", 25, 1,1,1,1)
 
-    for idx, line in ipairs(wrap(bus), 100) do
+    for idx, line in ipairs(wrap(bus), 200) do
             if idx > 10 then
                 break
             end
