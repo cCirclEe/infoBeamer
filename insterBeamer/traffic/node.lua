@@ -1,13 +1,11 @@
-gl.setup(640, 480)
+gl.setup(1390, 545)
 
 local font = resource.load_font("OpenSans-Regular.ttf")
 
 function node.render()
-    gl.clear(1, 1, 1, 1) -- red
-
     local bus = resource.render_child("bus")
-    bus:draw(0, 0, 300, 480)
+    bus:draw(0, 0, 690, 545)
 
     local tram = resource.render_child("tram")
-    tram:draw(305, 0, 640, 480)
+    tram:draw(695, 0, 1390, 545)
 end

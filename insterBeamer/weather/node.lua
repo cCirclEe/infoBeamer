@@ -1,8 +1,9 @@
-gl.setup(300, 500)
+gl.setup(515, 920)
 
 util.auto_loader(_G)
 
 local font = resource.load_font("OpenSans-Regular.ttf")
+local background = resource.load_image("wallpaper.jpg")
 
 util.file_watch("day.txt", function(content)
     day = content
@@ -29,20 +30,21 @@ function wrap(str, limit, indent, indent1)
 end
 
 function node.render()
-	gl.clear(1,0,0,1)
-	font:write(10, 30, "Weather", 30, 1,1,1,1)
+
+        background:draw(0, 0, WIDTH, HEIGHT, 0.7)
+	font:write(15, 30, "Wetter", 60, 1,1,1,1)
 
     for idx, line in ipairs(wrap(day), 40) do
             if idx > 15 then
                 break
             end
-        font:write(10, 40 + 50 * idx, line, 15, 1,1,1,1)
+        font:write(15, 70 + 70 * idx, line, 30, 1,1,1,1)
     end
 
     for idx, line in ipairs(wrap(weatherInfo), 40) do
             if idx > 15 then
                 break
             end
-        font:write(130, 40 + 50 * idx, line, 15, 1,1,1,1)
+        font:write(230, 70 + 70 * idx, line, 30, 1,1,1,1)
     end
 end

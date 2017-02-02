@@ -1,8 +1,9 @@
-gl.setup(350, 250)
+gl.setup(690, 545)
 
 util.auto_loader(_G)
 
 local font = resource.load_font("OpenSans-Regular.ttf")
+local background = resource.load_image("wallpaper.jpg")
 
 util.file_watch("tram.txt", function(content)
     bus = content
@@ -25,15 +26,14 @@ function wrap(str, limit, indent, indent1)
 end
 
 function node.render()
-    gl.clear(1, 0, 0, 1) -- white 
-
-    font:write(15, 10, "Bahn", 45, 1,1,1,1)
+    background:draw(0, 0, WIDTH, HEIGHT, 0.7)
+    font:write(15, 10, "Bahn", 60, 1,1,1,1)
+    font:write(15, 70, "(Waldstadt Zentrum)", 25, 1,1,1,1)
 
     for idx, line in ipairs(wrap(bus), 100) do
             if idx > 10 then
                 break
             end
-        font:write(15, 40 + 30 * idx, line, 20, 1,1,1,1)
+        font:write(15, 70 + 70 * idx, line, 30, 1,1,1,1)
     end
-
 end

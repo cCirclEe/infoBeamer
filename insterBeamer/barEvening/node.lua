@@ -1,8 +1,10 @@
-gl.setup(350, 100)
+gl.setup(690, 520)
 
 util.auto_loader(_G)
 
 local font = resource.load_font("OpenSans-Regular.ttf")
+local background = resource.load_image("wallpaper.jpg")
+local background2
 
 util.file_watch("barEvening.txt", function(content)
  	bar = content
@@ -24,16 +26,29 @@ function wrap(str, limit, indent, indent1)
     return splitted
 end
 
-
 function node.render()
-    gl.clear(1, 0, 0, 1) -- red
-
-    font:write(10, 10, "Barabend", 20, 1,1,1,1)
+    background:draw(0, 0, WIDTH, HEIGHT, 0.7)
+    font:write(10, 20, "Nächster Barabend", 60, 1,1,1,1)
 
     for idx, line in ipairs(wrap(bar), 40) do
-            if idx > 5 then
-                break
-            end
-        font:write(10, 20 + 10 * idx, line, 10, 1,1,1,1)
+        if idx > 4 then
+            break
+        end
+	if idx == 1 then 
+            font:write(15, 70 + 40 * idx, line, 35, 1,1,1,1)
+	end
+	if idx == 2 then 
+	    date = line:sub(1, -10)
+	    date = date..":"
+	    time = line:sub(-9, -4)
+            font:write(15, 80 + 40 * idx, date, 25, 1,1,1,1)
+            font:write(170, 80 + 40 * idx, time, 25, 1,1,1,1)
+	end
+	if idx == 3 then 
+	    path = line:sub(36,-1) 
+	    path = "/opt/insterBeamer/insterBeamer/barEvening/img/" .. path
+	    background2 = resource.load_image(path)
+	    background2:draw(20,20,100,100)
+	end
     end
 end
