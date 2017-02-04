@@ -35,7 +35,7 @@ function node.render()
             if idx > 5 then
                 break
             end
-        font:write(15, 70 + 70 * idx, line, 30, 1,1,1,1)
+        font:write(15, 70 + 60 * idx, line, 30, 1,1,1,1)
     end
 
 end

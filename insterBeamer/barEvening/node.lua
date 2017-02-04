@@ -3,11 +3,30 @@ gl.setup(690, 520)
 util.auto_loader(_G)
 
 local font = resource.load_font("OpenSans-Regular.ttf")
-local background = resource.load_image("wallpaper.jpg")
-local background2
+
+local background = resource.load_image{
+    file = "wallpaper.jpg";
+    mipmap = true;
+}
+
+local function parse_filename_from_filecontent(content)
+    for idx, line in ipairs(wrap(content), 40) do
+        if idx > 4 then
+            break
+        end
+	if idx == 3 then 
+	    print(line:sub(36,-1))
+	    return line:sub(36,-1) 
+	end
+    end
+end
 
 util.file_watch("barEvening.txt", function(content)
  	bar = content
+end)
+
+util.file_watch("barEvening.txt", function(raw)
+    background_barEvening = resource.load_image(background_barEvening = parse_filename_from_filecontent(raw));
 end)
 
 function wrap(str, limit, indent, indent1)
@@ -45,10 +64,7 @@ function node.render()
             font:write(170, 80 + 40 * idx, time, 25, 1,1,1,1)
 	end
 	if idx == 3 then 
-	    path = line:sub(36,-1) 
-	    path = "/opt/insterBeamer/insterBeamer/barEvening/img/" .. path
-	    background2 = resource.load_image(path)
-	    background2:draw(20,20,100,100)
+	    util.draw_correct(background_barEvening, 20, 20, 100, 100)
 	end
     end
 end

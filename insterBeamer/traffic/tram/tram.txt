@@ -1,6 +1,3 @@
  3 min (4 Tivoli über Hbf)
- 15:02* (31 Durlach Bahnhof)
- 15:02 (4 Tivoli über Hbf)
- 15:12 (4 Tivoli über Hbf)
- 15:22 (4 Tivoli über Hbf)
- 15:22 (31 Durlach Bahnhof)
+ 23:48 (4 Tivoli über Hbf)
+ 00:08 (4 Tivoli über Hbf)
