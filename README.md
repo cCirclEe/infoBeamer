@@ -7,7 +7,7 @@ This is an Info-Beamer project for my dorm.
 
 #Installation
 
-###TODO (before starting script):
+### TODO (before starting script):
 - install python (should be installed already)
 - ```sudo apt-get install mysql-server```
 - ```apt-cache search MySQLdb```
@@ -18,11 +18,11 @@ This is an Info-Beamer project for my dorm.
     - ```export LANG="de_DE.UTF-8"```
     - ```export LC_ALL="de_DE.UTF-8"```
 
-###Get GitHub repo:
+### Get GitHub repo:
 - ```git clone git://github.com/cCirclEe/insterBeamer.git```
 - in directory: <b>```/opt/insterBeamer/```</b>
 
-###Start InfoBeamer at startup: 
+### Start InfoBeamer at startup: 
 
 - ```sudo su```
 - ```vim /etc/init.d/myscript```
