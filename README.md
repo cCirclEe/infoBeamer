@@ -1,4 +1,4 @@
-# insterBeamer
+# infoBeamer
 This is an Info-Beamer project for my dorm. 
 <p align="left">
   <img src="screenshot.jpeg" />
